@@ -1,10 +1,10 @@
-interface Billboard {
+interface IBillboard {
   id: number;
-  name: string;
+  label: string;
   imageUrl: string;
 }
 
-interface Category {
+interface ICategory {
   id: string;
   name: string;
   billboard: Billboard;
