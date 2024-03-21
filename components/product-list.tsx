@@ -1,4 +1,5 @@
 import NoResults from './ui/no-results';
+import ProductCard from './ui/product-card';
 
 interface IProductListProps {
   title: string;
@@ -12,9 +13,7 @@ const ProductList: React.FC<IProductListProps> = ({ title, products }) => {
       {products.length === 0 && <NoResults />}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {products.map((product) => (
-          <div key={product.id} className=''>
-            {product.name}
-          </div>
+          <ProductCard key={product.id} product={product}></ProductCard>
         ))}
       </div>
     </div>
