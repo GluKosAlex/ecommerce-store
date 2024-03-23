@@ -4,6 +4,7 @@ import Container from '@/components/ui/container';
 import useCart from '@/hooks/use-cart';
 import { useEffect, useState } from 'react';
 import CartItem from './components/cart-item';
+import Summery from './components/summery';
 
 const CartPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -30,6 +31,7 @@ const CartPage = () => {
                 ))}
               </ul>
             </div>
+            <Summery />
           </div>
         </div>
       </Container>
